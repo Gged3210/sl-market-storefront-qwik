@@ -3,7 +3,6 @@ import { Link } from '@builder.io/qwik-city';
 import { APP_STATE, CUSTOMER_NOT_DEFINED_ID } from '~/constants';
 import { logoutMutation } from '~/providers/shop/account/account';
 import { getActiveCustomerQuery } from '~/providers/shop/customer/customer';
-import { GitHubLink } from '../GitHubLink/GitHubLink';
 import LogoutIcon from '../icons/LogoutIcon';
 import MenuIcon from '../icons/MenuIcon';
 import ShoppingBagIcon from '../icons/ShoppingBagIcon';
@@ -45,7 +44,7 @@ export default component$(() => {
 
 	return (
 		<div
-			class={`bg-gradient-to-r from-blue-700 to-indigo-900 transform shadow-xl sticky top-0 z-10 animate-dropIn`}
+			class={`bg-gradient-to-r from-green-600 to-green-800 transform shadow-xl sticky top-0 z-10 animate-dropIn`}
 		>
 			<header>
 				<div class="bg-zinc-100 text-gray-600 shadow-inner text-center text-sm py-1 px-2 xl:px-0">
@@ -53,13 +52,13 @@ export default component$(() => {
 						<div class="flex justify-between items-center w-full">
 							<div>
 								<p class="hidden sm:block">
-									{$localize`Exclusive: Get your own`}{' '}
+									{/* TODO {$localize`Exclusive: Get your own`}{' '} */}
 									<a
 										href="https://github.com/vendure-ecommerce/storefront-qwik-starter"
 										target="_blank"
 										class="underline"
 									>
-										{$localize`FREE storefront starter kit`}
+										{/* TODO {$localize`FREE storefront starter kit`} */}
 									</a>
 								</p>
 							</div>
@@ -94,11 +93,11 @@ export default component$(() => {
 					>
 						<MenuIcon />
 					</button>
-					<h1 class="text-white w-10">
+					{/* <h1 class="text-white w-10">
 						<Link href="/">
 							<img src={`/cube-logo-small.webp`} width={40} height={31} alt="Vendure logo" />
 						</Link>
-					</h1>
+					</h1> */}
 					<div class="hidden space-x-4 sm:block">
 						{collections.map((collection) => (
 							<Link
@@ -131,7 +130,7 @@ export default component$(() => {
 						</button>
 					</div>
 				</div>
-				<GitHubLink />
+				{/* <GitHubLink /> TODO for all rights reserved and company info */}
 			</header>
 		</div>
 	);
