@@ -6,6 +6,7 @@ set -e
 echo "Starting the build process..."
 
 # Run the build command
+npm install
 npm run build
 
 echo "Build completed successfully."
