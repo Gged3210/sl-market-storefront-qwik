@@ -11,6 +11,10 @@ export default defineConfig(async (config) => {
 		build: {
 			sourcemap: config.mode === 'development',
 		},
+		server: {
+			host: '127.0.0.1', // Add this to force IPv4 only
+			port: 5173,
+		},
 		plugins: [
 			qwikInsights({
 				publicApiKey: loadEnv('', '.', '').VITE_QWIK_INSIGHTS_KEY,
