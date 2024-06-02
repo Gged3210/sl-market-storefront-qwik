@@ -1,11 +1,11 @@
 import type { CodegenConfig } from '@graphql-codegen/cli';
 import { DEV_API, LOCAL_API, PROD_API } from './src/constants';
 
-let GRAPHQL_API = import.meta.env.IS_DEV
+let GRAPHQL_API = import.meta.env.VITE_IS_DEV
 	? DEV_API
-	: import.meta.env.IS_LOCAL
-	? LOCAL_API
-	: PROD_API;
+	: import.meta.env.VITE_IS_LOCAL
+		? LOCAL_API
+		: PROD_API;
 GRAPHQL_API = `${GRAPHQL_API}/admin-api`;
 
 const config: CodegenConfig = {
