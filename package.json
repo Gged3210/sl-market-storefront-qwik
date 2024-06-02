@@ -27,7 +27,7 @@
 		"lint": "eslint \"src/**/*.ts*\"",
 		"prepare": "husky install",
 		"preview": "qwik build preview && vite preview --open",
-		"start": "pnpm generate && vite --open --mode ssr --port 5173",
+		"start": "pnpm generate && vite --mode ssr --port 5173",
 		"qwik": "qwik",
 		"generate-admin": "graphql-codegen --config codegen-admin.ts",
 		"generate-shop": "graphql-codegen --config codegen-shop.ts",
