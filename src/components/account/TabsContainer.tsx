@@ -15,28 +15,28 @@ export const TabsContainer = component$(() => {
 					<Tab
 						Icon={UserCircleIcon}
 						text="Account details"
-						href="/account"
+						href="/market/account"
 						isActive={location.url.pathname === '/account/'}
 					/>
 
 					<Tab
 						Icon={ShoppingBagIcon}
 						text="Purchase history"
-						href="/account/orders"
+						href="/market/account/orders"
 						isActive={location.url.pathname.indexOf('orders') >= 0}
 					/>
 
 					<Tab
 						Icon={MapPinIcon}
 						text="Addresses"
-						href="/account/address-book"
+						href="/market/account/address-book"
 						isActive={location.url.pathname.indexOf('address-book') >= 0}
 					/>
 
 					<Tab
 						Icon={HashtagIcon}
 						text="Password change"
-						href="/account/password"
+						href="/market/account/password"
 						isActive={location.url.pathname.indexOf('password') >= 0}
 					/>
 				</ul>

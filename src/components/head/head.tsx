@@ -18,8 +18,8 @@ export const Head = component$(() => {
 			<meta name="theme-color" content="#1D4ED8" />
 			<title>{head.title || DEFAULT_METADATA_TITLE}</title>
 
-			<link rel="manifest" href="/manifest.json" />
-			<link rel="apple-touch-icon" href="/logo-192-192.png" />
+			<link rel="manifest" href="/market/manifest.json" />
+			<link rel="apple-touch-icon" href="/market/logo-192-192.png" />
 			<link rel="preconnect" href="https://demo.vendure.io" />
 			<link rel="canonical" href={loc.url.toString()} />
 

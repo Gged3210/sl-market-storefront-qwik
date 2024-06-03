@@ -57,7 +57,7 @@ export default component$(() => {
 											</p>
 											<div class="mt-6">
 												<Link
-													href="/checkout/"
+													href="/market/checkout/"
 													class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-600 hover:bg-primary-700 w-full"
 												>
 													{$localize`Checkout`}

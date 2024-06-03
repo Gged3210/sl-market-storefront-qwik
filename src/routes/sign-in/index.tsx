@@ -24,7 +24,7 @@ export default component$(() => {
 				<h2 class="mt-6 text-center text-3xl text-gray-900">Sign in to your account</h2>
 				<p class="mt-2 text-center text-sm text-gray-600">
 					Or{' '}
-					<Link href="/sign-up" class="font-medium text-primary-600 hover:text-primary-500">
+					<Link href="/market/sign-up" class="font-medium text-primary-600 hover:text-primary-500">
 						register a new account
 					</Link>
 				</p>
