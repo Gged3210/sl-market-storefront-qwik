@@ -1,17 +1,25 @@
 import type { CodegenConfig } from '@graphql-codegen/cli';
-import { DEV_API, LOCAL_API, PROD_API } from './src/constants';
 
-let GRAPHQL_API = import.meta.env.VITE_IS_DEV
-	? DEV_API
-	: import.meta.env.VITE_IS_LOCAL
-		? LOCAL_API
-		: PROD_API;
+// let GRAPHQL_API = import.meta.env.VITE_IS_DEV
+// 	? DEV_API
+// 	: import.meta.env.VITE_IS_LOCAL
+// 		? LOCAL_API
+// 		: PROD_API;
 
-GRAPHQL_API = `${GRAPHQL_API}/shop-api`;
+// GRAPHQL_API = `${GRAPHQL_API}/shop-api`;
+
+// const path = import.meta.env.VITE_IS_DEV == true ? import.meta.env.VITE_PATH_DEV : import.meta.env.VITE_PATH_PROD ;
+const baseUrl =
+	import.meta.env.VITE_IS_DEV == true
+		? import.meta.env.VITE_BASE_DEV
+		: import.meta.env.VITE_BASE_PROD;
+const shopApi = `${baseUrl}` + import.meta.env.VITE_SHOP_API;
+
+console.log('**shopApishopApishopApishopApishopApi***********SHOP***** SHOP', shopApi);
 
 const config: CodegenConfig = {
 	schema: [
-		GRAPHQL_API,
+		shopApi,
 		'type Mutation { createStripePaymentIntent: String }',
 		'type Query { generateBraintreeClientToken(orderId: ID, includeCustomerId: Boolean): String }',
 	],

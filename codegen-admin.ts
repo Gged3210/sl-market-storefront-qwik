@@ -1,15 +1,22 @@
 import type { CodegenConfig } from '@graphql-codegen/cli';
-import { DEV_API, LOCAL_API, PROD_API } from './src/constants';
 
-let GRAPHQL_API = import.meta.env.VITE_IS_DEV
-	? DEV_API
-	: import.meta.env.VITE_IS_LOCAL
-		? LOCAL_API
-		: PROD_API;
-GRAPHQL_API = `${GRAPHQL_API}/admin-api`;
+// let GRAPHQL_API = import.meta.env.VITE_IS_DEV
+// 	? DEV_API
+// 	: import.meta.env.VITE_IS_LOCAL
+// 		? LOCAL_API
+// 		: PROD_API;
+// GRAPHQL_API = `${GRAPHQL_API}/admin-api`;
+
+const baseUrl =
+	import.meta.env.VITE_IS_DEV == true
+		? import.meta.env.VITE_BASE_DEV
+		: import.meta.env.VITE_BASE_PROD;
+const adminApi = `${baseUrl}` + import.meta.env.VITE_ADMIN_API;
+
+console.log('**adminApiadminApiadminApiadminApi***********adminApi***** adminApi', adminApi);
 
 const config: CodegenConfig = {
-	schema: [GRAPHQL_API, 'type Mutation { createStripePaymentIntent: String }'],
+	schema: [adminApi, 'type Mutation { createStripePaymentIntent: String }'],
 	documents: ['"src/providers/admin/**/*.{ts,tsx}"', '!src/generated/*'],
 	generates: {
 		'src/generated/graphql-admin.ts': {

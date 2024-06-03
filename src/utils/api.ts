@@ -2,7 +2,7 @@ import { server$ } from '@builder.io/qwik-city';
 import { isBrowser } from '@builder.io/qwik/build';
 import type { DocumentNode } from 'graphql/index';
 import { print } from 'graphql/index';
-import { AUTH_TOKEN, HEADER_AUTH_TOKEN_KEY, PROD_API } from '~/constants';
+import { AUTH_TOKEN, HEADER_AUTH_TOKEN_KEY } from '~/constants';
 import type { Options as RequesterOptions } from '~/graphql-wrapper';
 import { getCookie, setCookie } from '.';
 
@@ -11,8 +11,19 @@ type ExecuteProps<V> = { query: string; variables?: V };
 type Options = { method: string; headers: Record<string, string>; body: string };
 
 // const baseUrl = import.meta.env.VITE_IS_DEV ? DEV_API : PROD_API; //@TODO dunno why this doesnt set to prod when IS_DEV is false
-const baseUrl = PROD_API;
-const shopApi = `${baseUrl}/shop-api`;
+// const path = import.meta.env.VITE_IS_DEV == true ? import.meta.env.VITE_PATH_DEV : import.meta.env.VITE_PATH_PROD ;
+const baseUrl =
+	import.meta.env.VITE_IS_DEV == true
+		? import.meta.env.VITE_BASE_DEV
+		: import.meta.env.VITE_BASE_PROD;
+const shopApi = `${baseUrl}` + import.meta.env.VITE_SHOP_API;
+
+console.log('****************************** baseUrl', baseUrl);
+console.log(
+	'****************************** import.meta.env.VITE_IS_DEV',
+	import.meta.env.VITE_IS_DEV
+);
+console.log('****************************** shopApishopApi', shopApi);
 
 export const requester = async <R, V>(
 	doc: DocumentNode,
