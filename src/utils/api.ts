@@ -12,12 +12,13 @@ type Options = { method: string; headers: Record<string, string>; body: string }
 
 // const baseUrl = import.meta.env.VITE_IS_DEV ? DEV_API : PROD_API; //@TODO dunno why this doesnt set to prod when IS_DEV is false
 // const path = import.meta.env.VITE_IS_DEV == true ? import.meta.env.VITE_PATH_DEV : import.meta.env.VITE_PATH_PROD ;
-const baseUrl =
-	import.meta.env.VITE_IS_DEV == true
-		? import.meta.env.VITE_BASE_DEV
-		: import.meta.env.VITE_BASE_PROD;
-const shopApi = `${baseUrl}` + import.meta.env.VITE_SHOP_API;
-
+// const baseUrl =
+// 	import.meta.env.VITE_IS_DEV == true
+// 		? import.meta.env.VITE_BASE_DEV
+// 		: import.meta.env.VITE_BASE_PROD;
+// const shopApi = `${baseUrl}` + import.meta.env.VITE_SHOP_API;
+const baseUrl = 'https://surplusloop.com/market';
+const shopApi = 'https://surplusloop.com/shop-api';
 console.log('****************************** baseUrl', baseUrl);
 console.log(
 	'****************************** import.meta.env.VITE_IS_DEV',

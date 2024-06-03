@@ -7,12 +7,13 @@ import type { CodegenConfig } from '@graphql-codegen/cli';
 // 		: PROD_API;
 // GRAPHQL_API = `${GRAPHQL_API}/admin-api`;
 
-const baseUrl =
-	import.meta.env.VITE_IS_DEV == true
-		? import.meta.env.VITE_BASE_DEV
-		: import.meta.env.VITE_BASE_PROD;
-const adminApi = `${baseUrl}` + import.meta.env.VITE_ADMIN_API;
+// const baseUrl =
+// 	import.meta.env.VITE_IS_DEV == true
+// 		? import.meta.env.VITE_BASE_DEV
+// 		: import.meta.env.VITE_BASE_PROD;
+// const adminApi = `${baseUrl}` + import.meta.env.VITE_ADMIN_API;
 
+const adminApi = 'https://surplusloop.com/admin-api';
 console.log('**adminApiadminApiadminApiadminApi***********adminApi***** adminApi', adminApi);
 
 const config: CodegenConfig = {

@@ -21,3 +21,12 @@ export const PROD_API = import.meta.env.VITE_PROD_URL;
 export const LOCAL_API = import.meta.env.VITE_DEV_URL;
 export const HERO_TITLE = 'SurplusLoop Marketplace';
 export const HERO_SUBTITLE = 'Where Businesses Buy & Sell Surplus, Smarter';
+
+export const BASE_PROD = import.meta.env.VITE_BASE_PROD;
+export const BASE_DEV = import.meta.env.VITE_BASE_DEV;
+
+export const PATH_PROD = import.meta.env.VITE_PATH_PROD;
+export const PATH_DEV = import.meta.env.VITE_PATH_DEV;
+
+export const SHOP_API = import.meta.env.VITE_SHOP_API;
+export const ADMIN_API = import.meta.env.VITE_ADMIN_API;
