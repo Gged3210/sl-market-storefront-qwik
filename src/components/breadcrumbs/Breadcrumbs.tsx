@@ -9,7 +9,7 @@ export default component$<{ items: { name: string; slug: string; id: string }[] 
 			<ol class="flex items-center space-x-1 md:space-x-4">
 				<li>
 					<div>
-						<Link href="/" class="text-gray-400 hover:text-gray-500">
+						<Link href="/market" class="text-gray-400 hover:text-gray-500">
 							<HomeIcon />
 							<span class="sr-only">Home</span>
 						</Link>

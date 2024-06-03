@@ -32,7 +32,7 @@ export default component$(() => {
 	useVisibleTask$(async () => {
 		appState.showCart = false;
 		if (appState.activeOrder?.lines?.length === 0) {
-			navigate('/');
+			navigate('/market');
 		}
 	});
 
@@ -40,7 +40,7 @@ export default component$(() => {
 		await transitionOrderToStateMutation();
 		const activeOrder = await addPaymentToOrderMutation();
 		appState.activeOrder = activeOrder;
-		navigate(`/checkout/confirmation/${activeOrder.code}`);
+		navigate(`/market/checkout/confirmation/${activeOrder.code}`);
 	});
 
 	return (
@@ -82,9 +82,8 @@ export default component$(() => {
 											delete shippingAddress.defaultBillingAddress;
 
 											const setOrderShippingAddress = async () => {
-												const setOrderShippingAddress = await setOrderShippingAddressMutation(
-													shippingAddress
-												);
+												const setOrderShippingAddress =
+													await setOrderShippingAddressMutation(shippingAddress);
 
 												if (setOrderShippingAddress.__typename === 'Order') {
 													if (isEnvVariableEnabled('VITE_SHOW_PAYMENT_STEP')) {

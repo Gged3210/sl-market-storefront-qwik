@@ -64,7 +64,11 @@ export default component$(() => {
 							</div>
 							<div class="flex mr-[60px] 2xl:mr-0">
 								<Link
-									href={appState.customer.id !== CUSTOMER_NOT_DEFINED_ID ? '/account' : '/sign-in'}
+									href={
+										appState.customer.id !== CUSTOMER_NOT_DEFINED_ID
+											? '/market/account'
+											: '/market/sign-in'
+									}
 									class="flex items-center space-x-1 pb-1 pr-2"
 								>
 									<UserIcon />
@@ -102,7 +106,7 @@ export default component$(() => {
 						{collections.map((collection) => (
 							<Link
 								class="text-sm md:text-base text-gray-200 hover:text-white"
-								href={`/collections/${collection.slug}`}
+								href={`/market/collections/${collection.slug}`}
 								key={collection.id}
 							>
 								{collection.name}

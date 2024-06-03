@@ -1,7 +1,7 @@
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { useLocation, useNavigate } from '@builder.io/qwik-city';
 import XCircleIcon from '~/components/icons/XCircleIcon';
-import { updateCustomerEmailAddressMutation } from '~/providers/shop/account/account';
+import { verifyCustomerAccountMutation } from '~/providers/shop/account/account';
 
 export default component$(() => {
 	const error = useSignal('');
@@ -9,13 +9,13 @@ export default component$(() => {
 	const navigate = useNavigate();
 
 	useVisibleTask$(async () => {
-		const updateCustomerEmailAddress = await updateCustomerEmailAddressMutation(
+		const { verifyCustomerAccount } = await verifyCustomerAccountMutation(
 			location.url.href.split('=')[1]
 		);
 
-		updateCustomerEmailAddress.__typename === 'Success'
-			? navigate('/account')
-			: (error.value = updateCustomerEmailAddress.message);
+		verifyCustomerAccount.__typename !== 'CurrentUser'
+			? (error.value = verifyCustomerAccount.message)
+			: navigate('/market/account');
 	});
 
 	return (
@@ -30,7 +30,7 @@ export default component$(() => {
 								</div>
 								<div class="ml-3">
 									<h3 class="text-sm font-medium text-red-800">
-										We ran into a problem verifying your email address change!
+										We ran into a problem verifying your account!
 									</h3>
 									<p class="text-sm text-red-700 mt-2">{error.value}</p>
 								</div>

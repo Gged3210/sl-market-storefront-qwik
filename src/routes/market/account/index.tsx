@@ -71,7 +71,7 @@ export default component$(() => {
 						<div class="relative flex h-32 w-full justify-center rounded-xl bg-cover">
 							<Image
 								layout="fullWidth"
-								src="/account-background.png"
+								src="/market/account-background.png"
 								class="absolute flex h-32 w-full justify-center rounded-xl bg-cover"
 								alt="background"
 							/>
@@ -79,7 +79,7 @@ export default component$(() => {
 								<Image
 									layout="fullWidth"
 									class="h-full w-full rounded-full"
-									src="/user-icon.webp"
+									src="/market/user-icon.webp"
 									alt="user icon"
 								/>
 							</div>

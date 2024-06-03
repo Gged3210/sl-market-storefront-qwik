@@ -35,7 +35,7 @@ export default component$(() => {
 					defaultShippingAddress: address.defaultShippingAddress,
 					defaultBillingAddress: address.defaultBillingAddress,
 					country: address.country.code,
-				} as ShippingAddress)
+				}) as ShippingAddress
 		);
 		activeCustomerAddresses.value = { id, addresses: shippingAddresses };
 
@@ -63,7 +63,7 @@ export default component$(() => {
 			<div class="flex justify-center">
 				<HighlightedButton
 					onClick$={() => {
-						navigate('/account/address-book/add');
+						navigate('/market/account/address-book/add');
 					}}
 				>
 					<PlusIcon /> &nbsp; New Address
