@@ -13,10 +13,11 @@ export default defineConfig(async (config) => {
 			sourcemap: config.mode === 'development',
 		},
 		server: {
-			// proxy: {
-			// 	'/': {
-			// 	  target: 'https://surplusloop.com/market/'
-			// 	},
+			proxy: {
+				'/': {
+					target: 'https://surplusloop.com/market/',
+				},
+			},
 			host: '0.0.0.0', // Add this to force IPv4 only
 			port: 5173,
 		},
