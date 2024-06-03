@@ -16,8 +16,8 @@ export const DEFAULT_LOCALE = 'en';
 // TODO: replace DEV_API and PROD_API with your dev and prod API urls.
 // export const DEV_API = 'https://readonlydemo.vendure.io';
 // export const PROD_API = 'https://readonlydemo.vendure.io';
-export const DEV_API = 'http://localhostDEV:3000';
-export const PROD_API = 'https://surplusloop.com';
-export const LOCAL_API = 'http://localhostLOCAL:3000';
+export const DEV_API = import.meta.env.VITE_DEV_URL;
+export const PROD_API = import.meta.env.VITE_PROD_URL;
+export const LOCAL_API = import.meta.env.VITE_DEV_URL;
 export const HERO_TITLE = 'SurplusLoop Marketplace';
 export const HERO_SUBTITLE = 'Where Businesses Buy & Sell Surplus, Smarter';
