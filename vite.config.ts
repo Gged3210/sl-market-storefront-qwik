@@ -6,7 +6,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(async (config) => {
 	return {
-		// base: '/market/',
+		base: '/market/',
 		// Enable to analyze via source-map-explorer
 		ssr: { target: 'webworker' },
 		build: {
