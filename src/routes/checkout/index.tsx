@@ -40,7 +40,7 @@ export default component$(() => {
 		await transitionOrderToStateMutation();
 		const activeOrder = await addPaymentToOrderMutation();
 		appState.activeOrder = activeOrder;
-		navigate(`/market/checkout/confirmation/${activeOrder.code}`);
+		navigate(`/checkout/confirmation/${activeOrder.code}`);
 	});
 
 	return (

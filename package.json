@@ -10,13 +10,13 @@
 	},
 	"scripts": {
 		"build": "qwik build",
-		"build.client": "vite build --base=/market/ && npm run i18n-translate",
-		"build.preview": "vite build --base=/market/ --ssr src/entry.preview.tsx",
-		"build.server": "vite build --base=/market/ -c adapters/cloudflare-pages/vite.config.ts",
+		"build.client": "vite build --base=/ && npm run i18n-translate",
+		"build.preview": "vite build --base=/ --ssr src/entry.preview.tsx",
+		"build.server": "vite build --base=/ -c adapters/cloudflare-pages/vite.config.ts",
 		"build.types": "tsc --incremental --noEmit",
 		"deploy": "wrangler pages dev ./dist",
 		"develop": "concurrently pnpm:dev pnpm:dev.server",
-		"dev": "vite --base=/market/ --mode ssr --port 8080",
+		"dev": "vite --base=/ --mode ssr --port 8080",
 		"dev.server": "cd one-click-deploy && yarn dev",
 		"dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
 		"fmt": "prettier --write .",
@@ -65,6 +65,7 @@
 		"undici": "6.6.2",
 		"vite": "5.1.1",
 		"vite-tsconfig-paths": "4.3.1",
+		"vitest": "^1.6.0",
 		"wrangler": "3.28.1"
 	},
 	"dependencies": {

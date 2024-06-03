@@ -17,7 +17,7 @@ export default component$(() => {
 
 		resetPassword.__typename !== 'CurrentUser'
 			? (error.value = resetPassword.message)
-			: navigate('/market/account');
+			: navigate('/account');
 	});
 
 	return (

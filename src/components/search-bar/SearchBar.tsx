@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 
 export default component$(() => {
 	return (
-		<form action="/market/search">
+		<form action="/search">
 			<input
 				type="search"
 				name="q"

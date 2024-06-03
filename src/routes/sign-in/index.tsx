@@ -13,7 +13,7 @@ export default component$(() => {
 	const login = $(async () => {
 		const { login } = await loginMutation(email.value, password.value, rememberMe.value);
 		if (login.__typename === 'CurrentUser') {
-			navigate('/market/account');
+			navigate('/account');
 		} else {
 			error.value = login.message;
 		}
@@ -24,7 +24,7 @@ export default component$(() => {
 				<h2 class="mt-6 text-center text-3xl text-gray-900">Sign in to your account</h2>
 				<p class="mt-2 text-center text-sm text-gray-600">
 					Or{' '}
-					<Link href="/market/sign-up" class="font-medium text-primary-600 hover:text-primary-500">
+					<Link href="/sign-up" class="font-medium text-primary-600 hover:text-primary-500">
 						register a new account
 					</Link>
 				</p>
@@ -87,7 +87,7 @@ export default component$(() => {
 
 							<div class="text-sm">
 								<button
-									onClick$={() => navigate('/market/forgot-password')}
+									onClick$={() => navigate('/forgot-password')}
 									class="font-medium text-primary-600 hover:text-primary-500"
 								>
 									Forgot your password?

@@ -63,7 +63,7 @@ export default component$(() => {
 			<div class="flex justify-center">
 				<HighlightedButton
 					onClick$={() => {
-						navigate('/market/account/address-book/add');
+						navigate('/account/address-book/add');
 					}}
 				>
 					<PlusIcon /> &nbsp; New Address

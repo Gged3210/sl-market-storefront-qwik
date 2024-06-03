@@ -142,7 +142,7 @@ export default component$(() => {
 						<span class="mr-4" />
 						<Button
 							onClick$={() => {
-								navigate('/market/account/address-book');
+								navigate('/account/address-book');
 							}}
 						>
 							<XMarkIcon /> &nbsp; Cancel
