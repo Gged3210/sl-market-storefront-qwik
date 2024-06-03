@@ -12,7 +12,7 @@ export default defineConfig(async (config) => {
 			sourcemap: config.mode === 'development',
 		},
 		server: {
-			host: '127.0.0.1', // Add this to force IPv4 only
+			host: '0.0.0.0', // Add this to force IPv4 only
 			port: 5173,
 		},
 		plugins: [
