@@ -36,7 +36,7 @@ export default component$(() => {
 					errorMessage.value = 'Login method mismatch!';
 					break;
 				default:
-					navigate('/account');
+					navigate('/market/account');
 					break;
 			}
 		} else {
