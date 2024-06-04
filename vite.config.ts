@@ -6,8 +6,8 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(async (config) => {
 	return {
-		publicDir: '/market/static/',
-		base: '/market',
+		publicDir: '/marketplace/static/',
+		base: '/marketplace',
 		// Enable to analyze via source-map-explorer
 		ssr: { target: 'webworker' },
 		build: {
@@ -16,7 +16,7 @@ export default defineConfig(async (config) => {
 		server: {
 			// proxy: {
 			// 	'/': {
-			// 		target: 'https://surplusloop.com/market/',
+			// 		target: 'https://surplusloop.com/marketplace/',
 			// 	},
 			// },
 			host: '0.0.0.0', // Add this to force IPv4 only

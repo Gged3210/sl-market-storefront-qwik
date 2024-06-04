@@ -66,8 +66,8 @@ export default component$(() => {
 								<Link
 									href={
 										appState.customer.id !== CUSTOMER_NOT_DEFINED_ID
-											? '/market/account'
-											: '/market/sign-in'
+											? '/marketplace/account'
+											: '/marketplace/sign-in'
 									}
 									class="flex items-center space-x-1 pb-1 pr-2"
 								>
@@ -106,7 +106,7 @@ export default component$(() => {
 						{collections.map((collection) => (
 							<Link
 								class="text-sm md:text-base text-gray-200 hover:text-white"
-								href={`/market/collections/${collection.slug}`}
+								href={`/marketplace/collections/${collection.slug}`}
 								key={collection.id}
 							>
 								{collection.name}

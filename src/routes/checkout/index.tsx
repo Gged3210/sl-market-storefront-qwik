@@ -32,7 +32,7 @@ export default component$(() => {
 	useVisibleTask$(async () => {
 		appState.showCart = false;
 		if (appState.activeOrder?.lines?.length === 0) {
-			navigate('/market');
+			navigate('/marketplace/');
 		}
 	});
 
