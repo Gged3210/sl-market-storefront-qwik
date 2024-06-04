@@ -1,11 +1,12 @@
-import { component$, useContext } from '@builder.io/qwik';
+// import { component$, useContext } from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
-import { APP_STATE } from '~/constants';
+// import { APP_STATE } from '~/constants';
 
 export default component$(() => {
-	const collections = useContext(APP_STATE).collections.filter(
-		(item) => item.parent?.name === '__root_collection__' && !!item.featuredAsset
-	);
+	// const collections = useContext(APP_STATE).collections.filter(
+	// 	(item) => item.parent?.name === '__root_collection__' && !!item.featuredAsset
+	// );
 
 	const navigation = {
 		support: [
