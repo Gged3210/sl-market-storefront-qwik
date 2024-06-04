@@ -17,14 +17,8 @@ type Options = { method: string; headers: Record<string, string>; body: string }
 // 		? import.meta.env.VITE_BASE_DEV
 // 		: import.meta.env.VITE_BASE_PROD;
 // const shopApi = `${baseUrl}` + import.meta.env.VITE_SHOP_API;
-const baseUrl = 'https://surplusloop.com/marketplace';
+// const baseUrl = 'https://surplusloop.com/marketplace';
 const shopApi = 'https://surplusloop.com/shop-api';
-console.log('****************************** baseUrl', baseUrl);
-console.log(
-	'****************************** import.meta.env.VITE_IS_DEV',
-	import.meta.env.VITE_IS_DEV
-);
-console.log('****************************** shopApishopApi', shopApi);
 
 export const requester = async <R, V>(
 	doc: DocumentNode,
