@@ -15,10 +15,10 @@ export default component$(() => {
 			{ name: $localize`Returns`, href: '#' },
 		],
 		company: [
-			{ name: $localize`About`, href: '#' },
-			{ name: $localize`Blog`, href: '#' },
-			{ name: $localize`Corporate responsibility`, href: '#' },
-			{ name: $localize`Press`, href: '#' },
+			{ name: $localize`About`, href: '../' },
+			// { name: $localize`Blog`, href: '#' },
+			// { name: $localize`Corporate responsibility`, href: '#' },
+			// { name: $localize`Press`, href: '#' },
 		],
 	};
 
@@ -27,7 +27,7 @@ export default component$(() => {
 			<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 ">
 				<div class="xl:grid xl:grid-cols-3 xl:gap-8">
 					<div class="grid grid-cols-2 gap-8 xl:col-span-2">
-						<div class="md:grid md:grid-cols-2 md:gap-8">
+						{/* <div class="md:grid md:grid-cols-2 md:gap-8"> //TODO
 							<div>
 								<h3 class="text-sm font-semibold text-gray-500 tracking-wider uppercase">{$localize`Shop`}</h3>
 								<ul class="mt-4 space-y-4">
@@ -58,7 +58,7 @@ export default component$(() => {
 									))}
 								</ul>
 							</div>
-						</div>
+						</div> */}
 						<div class="md:grid md:grid-cols-2 md:gap-8">
 							<div>
 								<h3 class="text-sm font-semibold text-gray-500 tracking-wider uppercase">
