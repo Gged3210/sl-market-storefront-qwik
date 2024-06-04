@@ -21,6 +21,7 @@ export default defineConfig(async (config) => {
 			// },
 			host: '0.0.0.0', // Add this to force IPv4 only
 			port: 5173,
+			hmr: false,
 		},
 		plugins: [
 			qwikInsights({
