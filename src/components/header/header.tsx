@@ -38,7 +38,7 @@ export default component$(() => {
 	});
 
 	const goHome = $(() => {
-		window.location.href = '/';
+		window.location.href = '/marketplace/';
 	});
 
 	const logout = $(async () => {
