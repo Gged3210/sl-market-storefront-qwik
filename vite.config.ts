@@ -6,7 +6,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(async (config) => {
 	return {
-		publicDir: '/marketplace/static/',
+		publicDir: '/marketplace/public/',
 		base: '/marketplace',
 		// Enable to analyze via source-map-explorer
 		ssr: { target: 'webworker' },

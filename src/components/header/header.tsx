@@ -3,6 +3,7 @@ import { Link } from '@builder.io/qwik-city';
 import { APP_STATE, CUSTOMER_NOT_DEFINED_ID } from '~/constants';
 import { logoutMutation } from '~/providers/shop/account/account';
 import { getActiveCustomerQuery } from '~/providers/shop/customer/customer';
+import HomeIcon from '../icons/HomeIcon';
 import LogoutIcon from '../icons/LogoutIcon';
 import MenuIcon from '../icons/MenuIcon';
 import ShoppingBagIcon from '../icons/ShoppingBagIcon';
@@ -34,6 +35,10 @@ export default component$(() => {
 				};
 			}
 		}
+	});
+
+	const goHome = $(() => {
+		window.location.href = '/';
 	});
 
 	const logout = $(async () => {
@@ -97,11 +102,9 @@ export default component$(() => {
 					>
 						<MenuIcon />
 					</button>
-					{/* <h1 class="text-white w-10">
-						<Link href="/">
-							<img src={`/cube-logo-small.webp`} width={40} height={31} alt="Vendure logo" />
-						</Link>
-					</h1> */}
+					<button onClick$={goHome} class="block text-white">
+						<HomeIcon />
+					</button>
 					<div class="hidden space-x-4 sm:block">
 						{collections.map((collection) => (
 							<Link

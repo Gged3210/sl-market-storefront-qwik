@@ -111,7 +111,7 @@ export default component$(() => {
 								<h3 class="sr-only">Description</h3>
 								<div
 									class="text-base text-gray-700"
-									dangerouslySetInnerHTML={productSignal.value.description}
+									dangerouslySetInnerHTML={productSignal.value.description} //TODO
 								/>
 							</div>
 							{1 < productSignal.value.variants.length && (

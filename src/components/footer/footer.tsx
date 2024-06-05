@@ -16,7 +16,7 @@ export default component$(() => {
 			{ name: $localize`Returns`, href: '#' },
 		],
 		company: [
-			{ name: $localize`About`, href: '../' },
+			{ name: $localize`About`, href: '/' },
 			// { name: $localize`Blog`, href: '#' },
 			// { name: $localize`Corporate responsibility`, href: '#' },
 			// { name: $localize`Press`, href: '#' },
