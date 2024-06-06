@@ -3,6 +3,8 @@ import { qwikInsights } from '@builder.io/qwik-labs/vite';
 import { qwikVite } from '@builder.io/qwik/optimizer';
 import { defineConfig, loadEnv } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import { partytownVite } from '@builder.io/partytown/utils';
+import { join } from 'path';
 
 export default defineConfig(async (config) => {
 	return {
@@ -36,6 +38,7 @@ export default defineConfig(async (config) => {
 				},
 			}),
 			tsconfigPaths(),
+			partytownVite({ dest: join(__dirname, 'dist', '~partytown') }),
 		],
 		preview: {
 			headers: {
