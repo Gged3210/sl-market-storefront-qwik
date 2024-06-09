@@ -714,7 +714,7 @@ const dynamicProductsRoutes = products.map((slug) => `/marketplace/products/${sl
 
 export default defineConfig(async (config) => {
 	return {
-		publicDir: '/marketplace/public/',
+		publicDir: '/marketplace/',
 		base: '/marketplace',
 		// Enable to analyze via source-map-explorer
 		ssr: { target: 'webworker' },

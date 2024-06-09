@@ -48,9 +48,9 @@ export const Head = component$(() => {
 			<meta name="theme-color" content="#1D4ED8" />
 			<title>{head.title || DEFAULT_METADATA_TITLE}</title>
 
-			<link rel="shortcut icon" href="/marketplace/public/favicon.ico" />
-			<link rel="manifest" href="/marketplace/public/manifest.json" />
-			<link rel="apple-touch-icon" href="/marketplace/public/logo-192-192.png" />
+			<link rel="shortcut icon" href="/marketplace/favicon.ico" />
+			<link rel="manifest" href="/marketplace/manifest.json" />
+			<link rel="apple-touch-icon" href="/marketplace/logo-192-192.png" />
 			<link rel="preconnect" href="https://surplusloop.com" />
 			{/* <link rel="preconnect" href="https://surplusloop.com" /> //todo */}
 			<link rel="canonical" href={loc.url.toString()} />
