@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
  
-Sitemap: https://surplusloop.com/sitemap.xml
+Sitemap: https://www.surplusloop.com/marketplace/dist/sitemap.xml
