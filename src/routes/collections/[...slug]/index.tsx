@@ -115,7 +115,7 @@ export default component$(() => {
 				{!!collectionSignal.value.children?.length && (
 					<div class="max-w-2xl mx-auto py-16 sm:py-16 lg:max-w-none border-b mb-16">
 						<h2 class="text-2xl font-light text-gray-900">Collections</h2>
-						<div class="mt-6 grid max-w-xs sm:max-w-none mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+						<div class="mt-6 grid max-w-xs sm:max-w-none mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-4">
 							{collectionSignal.value.children.map((child) => (
 								<CollectionCard key={child.id} collection={child}></CollectionCard>
 							))}
@@ -136,7 +136,7 @@ export default component$(() => {
 					/>
 				)}
 				<div class="sm:col-span-5 lg:col-span-4">
-					<div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+					<div class="grid justify-items-center grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 						{state.search.items.map((item) => (
 							<ProductCard
 								key={item.productId}

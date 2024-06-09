@@ -1,10 +1,21 @@
+import { partytownVite } from '@builder.io/partytown/utils';
 import { qwikCity } from '@builder.io/qwik-city/vite';
 import { qwikInsights } from '@builder.io/qwik-labs/vite';
 import { qwikVite } from '@builder.io/qwik/optimizer';
-import { defineConfig, loadEnv } from 'vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
-import { partytownVite } from '@builder.io/partytown/utils';
 import { join } from 'path';
+import { defineConfig, loadEnv } from 'vite';
+import Sitemap from 'vite-plugin-sitemap';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
+const collections = [
+	'kitchen-equipment-appliances',
+	'machinery',
+	'office-furniture',
+	'hotel-furniture',
+	'restaurant-cafe-furniture',
+	'overstock-goods',
+];
+const dynamicCollectionsRoutes = collections.map((slug) => `/marketplace/collections/${slug}`);
 
 export default defineConfig(async (config) => {
 	return {
@@ -39,6 +50,10 @@ export default defineConfig(async (config) => {
 			}),
 			tsconfigPaths(),
 			partytownVite({ dest: join(__dirname, 'dist', '~partytown') }),
+			Sitemap({
+				hostname: 'https://surplusloop.com',
+				dynamicRoutes: [...dynamicCollectionsRoutes],
+			}),
 		],
 		preview: {
 			headers: {
