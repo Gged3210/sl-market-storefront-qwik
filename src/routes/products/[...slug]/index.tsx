@@ -26,10 +26,6 @@ export const useProductLoader = routeLoader$(async ({ params }) => {
 	return product;
 });
 
-const handleClick = () => {
-	window.location.href = 'https://www.google.com';
-};
-
 export default component$(() => {
 	const appState = useContext(APP_STATE);
 
