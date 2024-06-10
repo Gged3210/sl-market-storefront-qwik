@@ -16,8 +16,9 @@ export default component$(() => {
 			{ name: $localize`Returns`, href: '#' },
 		],
 		company: [
-			{ name: $localize`About`, href: '/' },
-			// { name: $localize`Blog`, href: '#' },
+			{ name: $localize`About Us`, href: '/' },
+			{ name: $localize`Privacy Policy`, href: '/privacy_policy.pdf' },
+			{ name: $localize`Terms and Conditions`, href: '/tnc.pdf' },
 			// { name: $localize`Corporate responsibility`, href: '#' },
 			// { name: $localize`Press`, href: '#' },
 		],
@@ -62,7 +63,7 @@ export default component$(() => {
 						</div> */}
 						<div class="md:grid md:grid-cols-2 md:gap-8">
 							<div>
-								<h3 class="text-sm font-semibold text-gray-500 tracking-wider uppercase">
+								<h3 class="text-base font-bold text-gray-600 tracking-wider uppercase">
 									{$localize`Company`}
 								</h3>
 								<ul class="mt-4 space-y-4">
@@ -77,7 +78,7 @@ export default component$(() => {
 							</div>
 						</div>
 					</div>
-					<div class="mt-8 xl:mt-0">
+					<div hidden class="mt-8 xl:mt-0">
 						<h3 class="text-sm font-semibold text-gray-500 tracking-wider uppercase">
 							{$localize`Subscribe to our newsletter`}
 						</h3>

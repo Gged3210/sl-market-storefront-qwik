@@ -13,7 +13,7 @@ export default component$(() => {
 	const login = $(async () => {
 		const { login } = await loginMutation(email.value, password.value, rememberMe.value);
 		if (login.__typename === 'CurrentUser') {
-			navigate('/account');
+			navigate('/marketplace/account');
 		} else {
 			error.value = login.message;
 		}

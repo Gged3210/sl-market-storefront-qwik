@@ -9,8 +9,7 @@ import Price from '~/components/products/Price';
 import StockLevelLabel from '~/components/stock-level-label/StockLevelLabel';
 import TopReviews from '~/components/top-reviews/TopReviews';
 import { APP_STATE } from '~/constants';
-import { Order, OrderLine, Product } from '~/generated/graphql';
-import { addItemToOrderMutation } from '~/providers/shop/orders/order';
+import { OrderLine, Product } from '~/generated/graphql';
 import { getProductBySlug } from '~/providers/shop/products/products';
 import { Variant } from '~/types';
 import { cleanUpParams, generateDocumentHead, isEnvVariableEnabled } from '~/utils';
@@ -27,6 +26,10 @@ export const useProductLoader = routeLoader$(async ({ params }) => {
 	}
 	return product;
 });
+
+const handleClick = () => {
+	window.location.href = 'https://www.google.com';
+};
 
 export default component$(() => {
 	const appState = useContext(APP_STATE);
@@ -141,7 +144,7 @@ export default component$(() => {
 									forcedClass="text-3xl text-gray-900 mr-4"
 								></Price>
 								<div class="flex sm:flex-col1 align-baseline">
-									<button
+									{/* <button
 										class={{
 											'max-w-xs flex-1 transition-colors border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-primary-500 sm:w-full':
 												true,
@@ -175,6 +178,32 @@ export default component$(() => {
 										) : (
 											$localize`Add to cart`
 										)}
+									</button> */}
+
+									<button
+										class={{
+											'max-w-xs flex-1 transition-colors border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-primary-500 sm:w-full':
+												true,
+											'bg-primary-600 hover:bg-primary-700':
+												quantitySignal.value[selectedVariantIdSignal.value] === 0,
+											'bg-green-600 active:bg-green-700 hover:bg-green-700':
+												quantitySignal.value[selectedVariantIdSignal.value] >= 1 &&
+												quantitySignal.value[selectedVariantIdSignal.value] <= 7,
+											'bg-gray-600 cursor-not-allowed':
+												quantitySignal.value[selectedVariantIdSignal.value] > 7,
+										}}
+										onClick$={async () => {
+											handleClick;
+										}}
+									>
+										{quantitySignal.value[selectedVariantIdSignal.value] ? (
+											<span class="flex items-center">
+												<CheckIcon />
+												{$localize`${quantitySignal.value[selectedVariantIdSignal.value]} in cart`}
+											</span>
+										) : (
+											$localize`Click to enquire`
+										)}
 									</button>
 									<button
 										type="button"
@@ -195,7 +224,7 @@ export default component$(() => {
 								</div>
 							)}
 
-							<section class="mt-12 pt-12 border-t text-xs">
+							<section hidden class="mt-12 pt-12 border-t text-xs">
 								<h3 class="text-gray-600 font-bold mb-2">{$localize`Shipping & Returns`}</h3>
 								<div class="text-gray-500 space-y-1">
 									<p>
