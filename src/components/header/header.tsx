@@ -122,7 +122,7 @@ export default component$(() => {
 					<div class="flex-1 block md:pr-8">
 						<SearchBar />
 					</div>
-					<div class="">
+					<div hidden class="">
 						<button
 							name="Cart"
 							aria-label={`${totalQuantity} items in cart`}
