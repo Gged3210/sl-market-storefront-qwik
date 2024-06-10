@@ -3,7 +3,6 @@ import { DocumentHead, routeLoader$ } from '@builder.io/qwik-city';
 import { Image } from 'qwik-image';
 import Alert from '~/components/alert/Alert';
 import Breadcrumbs from '~/components/breadcrumbs/Breadcrumbs';
-import CheckIcon from '~/components/icons/CheckIcon';
 import HeartIcon from '~/components/icons/HeartIcon';
 import Price from '~/components/products/Price';
 import StockLevelLabel from '~/components/stock-level-label/StockLevelLabel';
@@ -192,18 +191,10 @@ export default component$(() => {
 											'bg-gray-600 cursor-not-allowed':
 												quantitySignal.value[selectedVariantIdSignal.value] > 7,
 										}}
-										onClick$={async () => {
-											handleClick;
-										}}
 									>
-										{quantitySignal.value[selectedVariantIdSignal.value] ? (
-											<span class="flex items-center">
-												<CheckIcon />
-												{$localize`${quantitySignal.value[selectedVariantIdSignal.value]} in cart`}
-											</span>
-										) : (
-											$localize`Click to enquire`
-										)}
+										<a href="https://docs.google.com/forms/d/e/1FAIpQLSeaWXifnvZxXnQLWNR57kiU9wdE4CFXJpKgameug_LqC7kWcw/viewform">
+											Click to enquire
+										</a>
 									</button>
 									<button
 										type="button"
