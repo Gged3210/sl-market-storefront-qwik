@@ -6,9 +6,7 @@ import { getActiveCustomerQuery } from '~/providers/shop/customer/customer';
 import HomeIcon from '../icons/HomeIcon';
 import LogoutIcon from '../icons/LogoutIcon';
 import MenuIcon from '../icons/MenuIcon';
-import ShoppingBagIcon from '../icons/ShoppingBagIcon';
 import UserIcon from '../icons/UserIcon';
-import SearchBar from '../search-bar/SearchBar';
 
 export default component$(() => {
 	const appState = useContext(APP_STATE);
@@ -119,7 +117,7 @@ export default component$(() => {
 							</Link>
 						))}
 					</div>
-					<div class="flex-1 block md:pr-8">
+					{/* <div class="flex-1 block md:pr-8">
 						<SearchBar />
 					</div>
 					<div hidden class="">
@@ -138,7 +136,7 @@ export default component$(() => {
 								''
 							)}
 						</button>
-					</div>
+					</div> */}
 				</div>
 				{/* <GitHubLink /> TODO for all rights reserved and company info */}
 			</header>
