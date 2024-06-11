@@ -13,6 +13,7 @@ import Cart from '~/components/cart/Cart';
 import Footer from '~/components/footer/footer';
 import Header from '~/components/header/header';
 import Menu from '~/components/menu/Menu';
+import { NewsletterPopup } from '~/components/popup/NewsletterPopup';
 import { APP_STATE, CUSTOMER_NOT_DEFINED_ID, IMAGE_RESOLUTIONS } from '~/constants';
 import { Order } from '~/generated/graphql';
 import { getAvailableCountriesQuery } from '~/providers/shop/checkout/checkout';
@@ -113,6 +114,7 @@ export default component$(() => {
 				<Slot />
 			</main>
 			<Footer />
+			<NewsletterPopup />
 		</div>
 	);
 });

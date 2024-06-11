@@ -4,6 +4,7 @@ import { APP_STATE } from '~/constants';
 
 export default component$(() => {
 	const collections = useContext(APP_STATE).collections;
+
 	return (
 		<div>
 			{/* <div class="relative h-[600px]">
