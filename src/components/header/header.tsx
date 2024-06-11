@@ -14,10 +14,10 @@ export default component$(() => {
 		(item) => item.parent?.name === '__root_collection__' && !!item.featuredAsset
 	);
 
-	const totalQuantity =
-		appState.activeOrder?.state !== 'PaymentAuthorized'
-			? appState.activeOrder?.totalQuantity || 0
-			: 0;
+	// const totalQuantity =
+	// 	appState.activeOrder?.state !== 'PaymentAuthorized'
+	// 		? appState.activeOrder?.totalQuantity || 0
+	// 		: 0;
 
 	useVisibleTask$(async () => {
 		if (appState.customer.id === CUSTOMER_NOT_DEFINED_ID) {
