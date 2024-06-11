@@ -8,7 +8,14 @@ import {
 	useStore,
 	useVisibleTask$,
 } from '@builder.io/qwik';
-import { Form, RequestHandler, routeAction$, routeLoader$, zod$ } from '@builder.io/qwik-city';
+import {
+	Form,
+	RequestHandler,
+	routeAction$,
+	routeLoader$,
+	useLocation,
+	zod$,
+} from '@builder.io/qwik-city';
 import { ImageTransformerProps, useImageProvider } from 'qwik-image';
 import Menu from '~/components/menu/Menu';
 import { responseDataAdapter } from '~/components/popup/common';
@@ -104,6 +111,10 @@ export default component$(() => {
 		})
 	);
 
+	const location = useLocation();
+	// console.log('12312312*****************', location);
+	const isRootPath = location.url.pathname === '/marketplace/';
+
 	return (
 		<div>
 			<Header />
@@ -113,7 +124,7 @@ export default component$(() => {
 				<Slot />
 			</main>
 			<Footer />
-			<NewsletterPopup />
+			{isRootPath && <NewsletterPopup />}
 		</div>
 	);
 });
