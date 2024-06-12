@@ -8,12 +8,18 @@ import Sitemap from 'vite-plugin-sitemap';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 const collections = [
-	'kitchen-equipment-appliances',
+	'live-auctions',
 	'machinery',
 	'office-furniture',
 	'hotel-furniture',
 	'restaurant-cafe-furniture',
 	'overstock-goods',
+	'kitchen-equipment-appliances',
+	'computer',
+	'property',
+	'scrap',
+	'waste',
+	'services',
 ];
 const dynamicCollectionsRoutes = collections.map((slug) => `/marketplace/collections/${slug}/`);
 
