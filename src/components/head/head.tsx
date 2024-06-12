@@ -51,9 +51,10 @@ export const Head = component$(() => {
 			<link rel="shortcut icon" href="/marketplace/favicon.ico" />
 			<link rel="manifest" href="/marketplace/manifest.json" />
 			<link rel="apple-touch-icon" href="/marketplace/logo-192-192.png" />
-			<link rel="preconnect" href="https://surplusloop.com" />
+			<link rel="preconnect" href={`https://surplusloop.com${loc.url.pathname}`} />
 			{/* <link rel="preconnect" href="https://surplusloop.com" /> //todo */}
-			<link rel="canonical" href={loc.url.toString()} />
+			{/* <link rel="canonical" href={loc.url.toString()} /> */}
+			<link rel="canonical" href={`https://surplusloop.com${loc.url.pathname}`} />
 
 			{head.meta.map((m, key) => (
 				<meta key={key} {...m} />
