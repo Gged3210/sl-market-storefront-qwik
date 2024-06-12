@@ -194,8 +194,8 @@ export const NewsletterPopup = component$(() => {
 							Sign up now to be among the first buyers or sellers on our marketplace!
 						</h2> */}
 						<p class="text-2xl font-bold mb-6">
-							Sign up now to be the <strong>FIRST</strong> to access our surplus assets at
-							unbeatable prices!
+							Sign Up Today and be the <strong>FIRST</strong> to join Asia's Largest Surplus
+							Network!
 						</p>
 						<Form action={subscribe}>
 							<input
@@ -203,7 +203,7 @@ export const NewsletterPopup = component$(() => {
 								name="email"
 								required
 								class="border border-gray-300 rounded-md py-3 px-4 w-full mb-6" // Increased padding and margin
-								placeholder="sereen.teoh@surplusloop.com"
+								placeholder="your email here"
 							/>
 							<button
 								aria-disabled={subscribe.isRunning}

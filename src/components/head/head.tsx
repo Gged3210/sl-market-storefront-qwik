@@ -67,7 +67,7 @@ export const Head = component$(() => {
 				<style key={key} {...s.props} dangerouslySetInnerHTML={s.style} />
 			))}
 
-			<meta name="description" content="Asset Liquidation Made Easy" />
+			<meta name="description" content="Asia's Largest Surplus Network" />
 
 			<Insights publicApiKey={ENV_VARIABLES.VITE_QWIK_INSIGHTS_KEY} />
 		</head>

@@ -1,5 +1,5 @@
 import { $, component$, useComputed$, useContext, useSignal, useTask$ } from '@builder.io/qwik';
-import { DocumentHead, routeLoader$ } from '@builder.io/qwik-city';
+import { DocumentHead, routeLoader$, useLocation } from '@builder.io/qwik-city';
 import { Image } from 'qwik-image';
 import Alert from '~/components/alert/Alert';
 import Breadcrumbs from '~/components/breadcrumbs/Breadcrumbs';
@@ -54,6 +54,15 @@ export default component$(() => {
 		tracker.track(() => appState.activeOrder);
 		quantitySignal.value = await calculateQuantities(productSignal.value);
 	});
+
+	const location = useLocation();
+	const pathMatch = ['/marketplace/products/solid-cool-counter-chiller-fridge--t1500l2tn.v/'];
+	const currentPath = location.url.pathname;
+	// console.log('************************************************ currentPath', currentPath);
+	// Determine which link to show based on the current path
+	const linkHref = pathMatch.includes(currentPath)
+		? 'https://docs.google.com/forms/d/19WP3X71GQLvTvMnK932FCZ_ozJk2mfzoIMRqsTwE72g/edit' //auction
+		: 'https://docs.google.com/forms/d/e/1FAIpQLSeaWXifnvZxXnQLWNR57kiU9wdE4CFXJpKgameug_LqC7kWcw/viewform'; //let our
 
 	return (
 		<div>
@@ -188,8 +197,8 @@ export default component$(() => {
 												quantitySignal.value[selectedVariantIdSignal.value] > 7,
 										}}
 									>
-										<a href="https://docs.google.com/forms/d/e/1FAIpQLSeaWXifnvZxXnQLWNR57kiU9wdE4CFXJpKgameug_LqC7kWcw/viewform">
-											Click to enquire
+										<a href={linkHref}>
+											{pathMatch.includes(currentPath) ? 'Click to auction' : 'Click to enquire'}
 										</a>
 									</button>
 									<button
