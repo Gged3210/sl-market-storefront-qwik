@@ -590,10 +590,9 @@ export default defineConfig(async (config) => {
 	return {
 		// publicDir: '/marketplace',
 		base: '/marketplace',
-		// Enable to analyze via source-map-explorer
 		ssr: { target: 'webworker' },
 		build: {
-			sourcemap: config.mode === 'development',
+			// sourcemap: config.mode === 'development',
 		},
 		server: {
 			host: '0.0.0.0', // Add this to force IPv4 only

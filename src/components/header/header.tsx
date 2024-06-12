@@ -3,9 +3,9 @@ import { Link } from '@builder.io/qwik-city';
 import { APP_STATE, CUSTOMER_NOT_DEFINED_ID } from '~/constants';
 import { logoutMutation } from '~/providers/shop/account/account';
 import { getActiveCustomerQuery } from '~/providers/shop/customer/customer';
-import HomeIcon from '../icons/HomeIcon';
 import LogoutIcon from '../icons/LogoutIcon';
 import MenuIcon from '../icons/MenuIcon';
+import SlIcon from '../icons/SlIcon';
 import UserIcon from '../icons/UserIcon';
 
 export default component$(() => {
@@ -104,7 +104,7 @@ export default component$(() => {
 						<MenuIcon />
 					</button>
 					<button onClick$={goHome} class="block text-white">
-						<HomeIcon />
+						<SlIcon />
 					</button>
 					<div class="hidden space-x-4 sm:block">
 						{collections.map((collection) => (
