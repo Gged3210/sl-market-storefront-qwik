@@ -24,6 +24,9 @@ const collections = [
 const dynamicCollectionsRoutes = collections.map((slug) => `/marketplace/collections/${slug}/`);
 
 const products = [
+	'solid-cool-counter-chiller-fridge--t1500l2tn.v',
+	'beko-2-door-fridge-270l-pro-smart-inverter/',
+	'hitachi-inverter-2-doors-fridge---335liters-r-v420p3m/',
 	'bar-stool',
 	'bar-stool-black',
 	'round-stainless-steel-stool',
