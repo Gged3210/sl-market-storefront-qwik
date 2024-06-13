@@ -8,8 +8,9 @@ import { QwikPartytown } from '../partytown/partytown';
 
 export const Head = component$(() => {
 	const documentHead = useDocumentHead();
-	const head =
-		documentHead.meta.length > 0 ? documentHead : { ...documentHead, ...generateDocumentHead() };
+	// const head =
+	// 	documentHead.meta.length > 0 ? documentHead : { ...documentHead, ...generateDocumentHead() };
+	const head = { ...documentHead, ...generateDocumentHead() };
 	const loc = useLocation();
 
 	return (

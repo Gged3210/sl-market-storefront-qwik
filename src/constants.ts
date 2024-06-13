@@ -7,11 +7,10 @@ export const CUSTOMER_NOT_DEFINED_ID = 'CUSTOMER_NOT_DEFINED_ID';
 export const HEADER_AUTH_TOKEN_KEY = 'vendure-auth-token';
 export const IMAGE_RESOLUTIONS = [1000, 800, 600, 400];
 export const HOMEPAGE_IMAGE = '/marketplace/homepage.jpeg';
-export const DEFAULT_METADATA_URL = 'https://qwik-storefront.vendure.io/';
+export const DEFAULT_METADATA_URL = 'https://surplusloop.com';
 export const DEFAULT_METADATA_TITLE = 'SurplusLoop Marketplace';
-export const DEFAULT_METADATA_DESCRIPTION =
-	'A Marketplace For Surplus Assets | Asset Liquidation Made Easy';
-export const DEFAULT_METADATA_IMAGE = 'https://qwik-storefront.vendure.io/social-image.png';
+export const DEFAULT_METADATA_DESCRIPTION = "Asia's Largest Surplus Network";
+export const DEFAULT_METADATA_IMAGE = 'https://surplusloop.com/marketplace/logo.webp';
 export const DEFAULT_LOCALE = 'en';
 // TODO: replace DEV_API and PROD_API with your dev and prod API urls.
 // export const DEV_API = 'https://readonlydemo.vendure.io';
