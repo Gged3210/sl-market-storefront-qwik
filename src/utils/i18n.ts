@@ -82,11 +82,12 @@ export function extractLang(acceptLanguage: string | undefined | null, url: stri
  * @returns The base URL to use for loading the chunks in the browser.
  */
 export function extractBase({ serverData }: RenderOptions): string {
-	if (import.meta.env.DEV) {
-		return '/marketplace/build';
-	} else {
-		return '/marketplace/build/' + serverData!.locale;
-	}
+	// if (import.meta.env.DEV) {
+	console.log('serverData', serverData);
+	return '/marketplace/build'; //@TODO fix this for multi lang
+	// } else {
+	// 	return '/marketplace/build/' + serverData!.locale;
+	// }
 }
 
 export function useI18n() {
