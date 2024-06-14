@@ -6,9 +6,9 @@ import '@angular/localize/init';
 import { getLocale, withLocale } from '@builder.io/qwik';
 import type { RenderOptions } from '@builder.io/qwik/server';
 import { DEFAULT_LOCALE } from '~/constants';
+import DE from '../locales/message.de.json';
 import EN from '../locales/message.en.json';
 import ES from '../locales/message.es.json';
-import DE from '../locales/message.de.json';
 
 /**
  * This file is left for the developer to customize to get the behavior they want for localization.
@@ -83,9 +83,9 @@ export function extractLang(acceptLanguage: string | undefined | null, url: stri
  */
 export function extractBase({ serverData }: RenderOptions): string {
 	if (import.meta.env.DEV) {
-		return '/build';
+		return '/marketplace/build';
 	} else {
-		return '/build/' + serverData!.locale;
+		return '/marketplace/build/' + serverData!.locale;
 	}
 }
 
