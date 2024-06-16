@@ -624,7 +624,6 @@ export default defineConfig(async (config) => {
 			partytownVite({ dest: join(__dirname, 'dist', '~partytown') }),
 			Sitemap({
 				hostname: 'https://surplusloop.com',
-				basePath: '/marketplace',
 				dynamicRoutes: [...dynamicCollectionsRoutes, ...dynamicProductsRoutes],
 			}),
 		],

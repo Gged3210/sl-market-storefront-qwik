@@ -16,7 +16,6 @@ export default extendConfig(baseConfig, () => {
 				ssg: {
 					include: ['/*'],
 					origin: 'https://surplusloop.com',
-					sitemapOutFile: 'sitemap2.xml',
 				},
 			}),
 		],

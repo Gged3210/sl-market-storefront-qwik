@@ -5,7 +5,7 @@ import { logoutMutation } from '~/providers/shop/account/account';
 import { getActiveCustomerQuery } from '~/providers/shop/customer/customer';
 import LogoutIcon from '../icons/LogoutIcon';
 import MenuIcon from '../icons/MenuIcon';
-import SlIcon from '../icons/SlIcon';
+import SL_Icon from '../icons/SL_Icon';
 import UserIcon from '../icons/UserIcon';
 
 export default component$(() => {
@@ -99,12 +99,13 @@ export default component$(() => {
 				<div class="max-w-6xl mx-auto p-4 flex items-center space-x-4">
 					<button
 						class="block sm:hidden text-white"
+						aria-label="menu"
 						onClick$={() => (appState.showMenu = !appState.showMenu)}
 					>
 						<MenuIcon />
 					</button>
-					<button onClick$={goHome} class="block text-white">
-						<SlIcon />
+					<button onClick$={goHome} class="block text-white" aria-label="SurplusLoop Home">
+						<SL_Icon />
 					</button>
 					<div class="hidden space-x-4 sm:block">
 						{collections.map((collection) => (
