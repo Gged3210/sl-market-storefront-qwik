@@ -108,10 +108,11 @@ export default component$(() => {
 													'object-center object-cover rounded-lg': true,
 													'border-b-8 border-primary-600': currentImageSig.value.id === asset.id,
 												}}
+												aria-label={productSignal.value.name}
 												width="80"
 												height="80"
-												src={asset.preview + '?w=400&h=400&format=webp'}
-												alt={asset.name}
+												src={asset.preview + '?w=80&h=80&format=webp'}
+												alt={productSignal.value.name}
 												onClick$={() => {
 													currentImageSig.value = asset;
 												}}
