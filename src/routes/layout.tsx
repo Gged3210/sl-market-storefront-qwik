@@ -167,18 +167,18 @@ export const NewsletterPopup = component$(() => {
 	const popupRef = useSignal<HTMLDivElement | null>(null);
 	const subscribe = useSubscribe();
 
-	const handleBackdropClick = $((event: MouseEvent) => {
-		if (popupRef.value && !popupRef.value.contains(event.target as Node)) {
-			showPopup.value = false;
-		}
-	});
+	// const handleBackdropClick = $((event: MouseEvent) => {
+	// 	if (popupRef.value && !popupRef.value.contains(event.target as Node)) {
+	// 		showPopup.value = false;
+	// 	}
+	// });
 
 	return (
 		<div>
 			{showPopup.value && (
 				<div
 					class="fixed inset-0 bg-black bg-opacity-65 flex justify-center items-center"
-					onClick$={handleBackdropClick}
+					// onClick$={handleBackdropClick}
 				>
 					<div
 						class="bg-white rounded-lg shadow-lg p-10 relative max-w-xl" // Increased padding and max-width
@@ -186,7 +186,7 @@ export const NewsletterPopup = component$(() => {
 					>
 						<button
 							class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" // Adjusted top and right position
-							onClick$={() => (showPopup.value = false)}
+							// onClick$={() => (showPopup.value = false)}
 						>
 							&times;
 						</button>
@@ -215,9 +215,10 @@ export const NewsletterPopup = component$(() => {
 							</button>
 						</Form>
 						<div>{subscribe.isRunning && <LoadingAnimation />}</div>
-						{subscribe.value?.success && (
-							<p class="text-base text-red-500 pt-2">Thank you, you may close this now</p>
-						)}
+						{
+							subscribe.value?.success && (showPopup.value = false)
+							// <p class="text-base text-red-500 pt-2">Thank you, you may close this now</p>
+						}
 						<br />
 						<p class="text-xs text-gray-400">
 							By joining us, you acknowledge and agree to let us register an account for you, and
