@@ -184,12 +184,12 @@ export const NewsletterPopup = component$(() => {
 						class="bg-white rounded-lg shadow-lg p-10 relative max-w-xl" // Increased padding and max-width
 						ref={(el) => (popupRef.value = el)}
 					>
-						<button
+						{/* <button
 							class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" // Adjusted top and right position
 							// onClick$={() => (showPopup.value = false)}
 						>
 							&times;
-						</button>
+						</button> */}
 						{/* <h2 class="text-2xl font-bold mb-6">
 							Sign up now to be among the first buyers or sellers on our marketplace!
 						</h2> */}
